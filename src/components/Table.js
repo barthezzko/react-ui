@@ -1,8 +1,9 @@
 import React from 'react';
+import Row from './Row.js';
 
-export default class Welcome extends React.Component {
+export default class Table extends React.Component {
   render() {
-    return <h1>Hello, {this.props.name}</h1>;
+    return <table><tbody><Row value={this.props.value}/><Row  value={this.props.value}/></tbody></table>;
   }
 }
 
