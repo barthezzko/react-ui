@@ -1,17 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import Welcome from './components/Welcome.js';
-import Table from './components/Table.js';
+//import Table from './components/Table.js';
 import './App.css';
+import { Button, Table } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Welcome name="Mike"/>
-        <Table value="asdf"/>
-      </header>
-
+        <Table striped={true} bordered hover >
+          <thead>
+            <tr>
+              <th>assa</th>
+              <th>assa</th>
+              <th>assa</th>
+              <th>assa</th>
+            </tr>
+            <tr>
+              <td>assa</td>
+              <td>assa</td>
+              <td>assa</td>
+              <td>assa</td>
+            </tr>
+            <tr>
+              <td>assa</td>
+              <td>assa</td>
+              <td>assa</td>
+              <td>assa</td>
+            </tr>
+          </thead>
+        </Table>
+        <Button variant="danger">ola</Button>
     </div>
   );
 }

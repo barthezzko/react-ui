@@ -41,3 +41,6 @@ td, th {
     outline: 1px solid white;
     padding: 3px;
 }
+*{
+  font-size: 9pt;
+}
