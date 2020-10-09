@@ -1,36 +1,38 @@
 import React from 'react';
 import Welcome from './components/Welcome.js';
-//import Table from './components/Table.js';
+import DataTable from './components/DataTable.js';
 import './App.css';
-import { Button, Table } from 'react-bootstrap';
+import { Button, Navbar, Nav, NavDropdown, Form, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
-        <Table striped={true} bordered hover >
-          <thead>
-            <tr>
-              <th>assa</th>
-              <th>assa</th>
-              <th>assa</th>
-              <th>assa</th>
-            </tr>
-            <tr>
-              <td>assa</td>
-              <td>assa</td>
-              <td>assa</td>
-              <td>assa</td>
-            </tr>
-            <tr>
-              <td>assa</td>
-              <td>assa</td>
-              <td>assa</td>
-              <td>assa</td>
-            </tr>
-          </thead>
-        </Table>
-        <Button variant="danger">ola</Button>
+      <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home">React UI</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Link</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Form inline>
+            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Navbar>
+      <div className="container-fluid">
+        <h2>Order List</h2>
+        <DataTable/>
+      </div>
     </div>
   );
 }
